@@ -226,7 +226,7 @@ SELECT * FROM ingresso;
 SELECT * FROM ingresso_has_evento;
 
 
--- Exemplos de comandos ALTER TABLE, DELETE, UPDATE:
+-- Exemplos de comandos ALTER TABLE, DELETE, UPDATE, DROP, TRUNCATE:
 
 UPDATE evento
 SET nomeEvento = 'Novo Evento X', dataEvento = '2024-06-25 20:30:00'
@@ -240,6 +240,13 @@ DELETE FROM ingresso_has_evento WHERE ingresso_idIngresso = 1;
 DELETE FROM ingresso WHERE idIngresso = 1;
 -- 3. Excluir o registro na tabela pagamento
 DELETE FROM pagamento WHERE idIngresso = 1;
+
+-- DROP
+ALTER TABLE evento DROP COLUMN eventocol;
+
+-- TRUNCATE: Em nosso script não foi possível utilizar o comando TRUNCATE, devido às dependências de chave estrangeira existentes. 
+-- Portanto, foi utilizado o comando DELETE para remover os registros de tabelas, garantindo que os registros relacionados em outras tabelas 
+-- fossem  tratados adequadamente antes de deletar.
 
 
 
