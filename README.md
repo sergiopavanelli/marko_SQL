@@ -22,10 +22,10 @@
 
     - Principais comandos DDL:
 
-`CREATE`: Cria novos objetos no banco de dados (por exemplo, tabelas, índices, visões).
-`ALTER`: Modifica a estrutura dos objetos existentes no banco de dados.
-`DROP`: Remove objetos do banco de dados.
-`TRUNCATE`: Remove todos os registros de uma tabela, mas mantém a estrutura da tabela.
+- `CREATE`: Cria novos objetos no banco de dados (por exemplo, tabelas, índices, visões).
+- `ALTER`: Modifica a estrutura dos objetos existentes no banco de dados.
+- `DROP`: Remove objetos do banco de dados.
+- `TRUNCATE`: Remove todos os registros de uma tabela, mas mantém a estrutura da tabela.
 
 ### DML (Data Manipulation Language):
 
@@ -37,8 +37,8 @@
 
     - Principais comandos DML:
 
-`INSERT`: Insere novos dados em uma tabela.
-`UPDATE`: Atualiza dados existentes em uma tabela.
-`DELETE`: Remove dados de uma tabela.
-`SELECT`: Consulta dados em uma tabela (ou conjunto de tabelas).
+- `INSERT`: Insere novos dados em uma tabela.
+- `UPDATE`: Atualiza dados existentes em uma tabela.
+- `DELETE`: Remove dados de uma tabela.
+- `SELECT`: Consulta dados em uma tabela (ou conjunto de tabelas).
 
