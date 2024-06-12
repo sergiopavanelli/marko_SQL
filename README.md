@@ -16,7 +16,7 @@
 
 ### DDL (Data Definition Language):
 
-- Criação uma base de dados com as tabelas em um arquivo .sql do banco de dados do sistema.
+- Criação de uma base de dados com as tabelas em um arquivo .sql do banco de dados do sistema.
 
     - DDL é uma linguagem de definição de dados usada para definir e gerenciar estruturas de banco de dados. Os comandos DDL são responsáveis pela criação, modificação e remoção de objetos de banco de dados, como tabelas, índices, e esquemas.
 
