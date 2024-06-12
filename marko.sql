@@ -245,7 +245,7 @@ DELETE FROM pagamento WHERE idIngresso = 1;
 ALTER TABLE evento DROP COLUMN eventocol;
 
 -- TRUNCATE: Em nosso script não foi possível utilizar o comando TRUNCATE, devido às dependências de chave estrangeira existentes. 
--- Portanto, foi utilizado o comando DELETE para remover os registros de tabelas, garantindo que os registros relacionados em outras tabelas fossem  tratados adequadamente antes de deletar.
+-- Portanto, foi utilizado o comando DELETE para remover os registros de tabelas, garantindo que os registros relacionados em outras tabelas fossem tratados adequadamente antes de deletar.
 
 
 
