@@ -60,7 +60,7 @@ CREATE TABLE cliente (
 
 -- Tabela relatorio_evento
 CREATE TABLE relatorio_evento (
-	idRelatorio INT NOT NULL,
+	  idRelatorio INT NOT NULL,
     quantIngressos INT NOT NULL,
     valorTotalCompra FLOAT NULL,
     numeroOcorrencias DATETIME NULL,
@@ -120,7 +120,7 @@ CREATE TABLE evento (
 
 -- Tabela pagamento
 CREATE TABLE pagamento (
-	idPagamento INT NOT NULL,
+	  idPagamento INT NOT NULL,
     idIngresso INT NOT NULL,
     dataValidade DATETIME NULL,
     CVV VARCHAR(45) NULL,
@@ -198,14 +198,14 @@ INSERT INTO evento (idEvento, nomeEvento, dataEvento, cliente_cpf, promotor_cnpj
 (2, 'Evento Y', '2024-07-15 20:00:00', '98765432100', '98765432109876', '32165498765432');
 
 -- Inserir dados na tabela relatorio_evento
-INSERT INTO relatorio_evento (quantIngressos, valorTotalCompra, numeroOcorrencias, pulseirasAtivas, pulseirasDevolvidas, totalFuncionarios, produtor_geral_cnpj, promotor_cnpj) VALUES 
-(100, 5000.00, '2024-06-10 18:00:00', 80, '20', 10, '45678901234567', '12345678901234'),
-(50, 2500.00, '2024-06-11 12:00:00', 40, '10', 5, '32165498765432', '98765432109876');
+INSERT INTO relatorio_evento (idRelatorio, quantIngressos, valorTotalCompra, numeroOcorrencias, pulseirasAtivas, pulseirasDevolvidas, totalFuncionarios, produtor_geral_cnpj, promotor_cnpj) VALUES 
+(1, 100, 5000.00, '2024-06-10 18:00:00', 80, '20', 10, '45678901234567', '12345678901234'),
+(2, 50, 2500.00, '2024-06-11 12:00:00', 40, '10', 5, '32165498765432', '98765432109876');
 
 -- Inserir dados na tabela pagamento
-INSERT INTO pagamento (idIngresso, dataValidade, CVV, nomeCartao, CPF, email) VALUES 
-(1, '2024-12-31 23:59:59', '123', 'Cartao1', '04188487660', 'clientea@example.com'),
-(2, '2024-12-31 23:59:59', '456', 'Cartao2', '98765432100', 'clienteb@example.com');
+INSERT INTO pagamento (idPagamento, idIngresso, dataValidade, CVV, nomeCartao, CPF, email) VALUES 
+(1, 1, '2024-12-31 23:59:59', '123', 'Cartao1', '04188487660', 'clientea@example.com'),
+(2, 2, '2024-12-31 23:59:59', '456', 'Cartao2', '98765432100', 'clienteb@example.com');
 
 -- Inserir dados na tabela ingresso
 INSERT INTO ingresso (idIngresso, dataPedido, valorPedido, pagamento_idIngresso) VALUES 
