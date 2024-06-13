@@ -60,6 +60,7 @@ CREATE TABLE cliente (
 
 -- Tabela relatorio_evento
 CREATE TABLE relatorio_evento (
+	idRelatorio INT NOT NULL,
     quantIngressos INT NOT NULL,
     valorTotalCompra FLOAT NULL,
     numeroOcorrencias DATETIME NULL,
@@ -68,7 +69,7 @@ CREATE TABLE relatorio_evento (
     totalFuncionarios INT NULL,
     produtor_geral_cnpj VARCHAR(20) NOT NULL, 
     promotor_cnpj VARCHAR(20) NOT NULL,
-    PRIMARY KEY (quantIngressos),
+    PRIMARY KEY (idRelatorio),
     INDEX fk_relatorio_evento_produtor_geral1_idx (produtor_geral_cnpj ASC), 
     INDEX fk_relatorio_evento_promotor1_idx (promotor_cnpj ASC), 
     CONSTRAINT fk_relatorio_evento_produtor_geral1 
@@ -119,13 +120,14 @@ CREATE TABLE evento (
 
 -- Tabela pagamento
 CREATE TABLE pagamento (
+	idPagamento INT NOT NULL,
     idIngresso INT NOT NULL,
     dataValidade DATETIME NULL,
     CVV VARCHAR(45) NULL,
     nomeCartao VARCHAR(45) NULL,
     CPF VARCHAR(20) NULL,
     email VARCHAR(45) NULL,
-    PRIMARY KEY (idIngresso)
+    PRIMARY KEY (idPagamento)
 );
 
 -- Tabela ingresso
@@ -138,7 +140,7 @@ CREATE TABLE ingresso (
     INDEX fk_Ingresso_pagamento1_idx (pagamento_idIngresso ASC),
     CONSTRAINT fk_Ingresso_pagamento1
       FOREIGN KEY (pagamento_idIngresso)
-      REFERENCES pagamento (idIngresso)
+      REFERENCES pagamento (idPagamento)
       ON DELETE NO ACTION
       ON UPDATE NO ACTION
 );
@@ -226,7 +228,7 @@ SELECT * FROM ingresso;
 SELECT * FROM ingresso_has_evento;
 
 
--- Exemplos de comandos ALTER TABLE, DELETE, UPDATE, DROP, TRUNCATE:
+-- Exemplos de comandos ALTER TABLE, DELETE, UPDATE, DROP
 
 UPDATE evento
 SET nomeEvento = 'Novo Evento X', dataEvento = '2024-06-25 20:30:00'
@@ -246,6 +248,3 @@ ALTER TABLE evento DROP COLUMN eventocol;
 
 -- TRUNCATE: Em nosso script não foi possível utilizar o comando TRUNCATE, devido às dependências de chave estrangeira existentes. 
 -- Portanto, foi utilizado o comando DELETE para remover os registros de tabelas, garantindo que os registros relacionados em outras tabelas fossem tratados adequadamente antes de deletar.
-
-
-
