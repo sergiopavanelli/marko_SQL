@@ -60,7 +60,7 @@ CREATE TABLE cliente (
 
 -- Tabela relatorio_evento
 CREATE TABLE relatorio_evento (
-	  idRelatorio INT NOT NULL,
+    idRelatorio INT NOT NULL,
     quantIngressos INT NOT NULL,
     valorTotalCompra FLOAT NULL,
     numeroOcorrencias DATETIME NULL,
