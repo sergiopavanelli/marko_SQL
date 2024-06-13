@@ -120,7 +120,7 @@ CREATE TABLE evento (
 
 -- Tabela pagamento
 CREATE TABLE pagamento (
-	  idPagamento INT NOT NULL,
+    idPagamento INT NOT NULL,
     idIngresso INT NOT NULL,
     dataValidade DATETIME NULL,
     CVV VARCHAR(45) NULL,
