@@ -230,9 +230,13 @@ SELECT * FROM ingresso_has_evento;
 
 -- Exemplos de comandos ALTER TABLE, DELETE, UPDATE, DROP
 
+-- Atualizar dados na tabela evento:
+
 UPDATE evento
 SET nomeEvento = 'Novo Evento X', dataEvento = '2024-06-25 20:30:00'
 WHERE idEvento = 1;
+
+-- Adicionar uma nova coluna na tabela evento:
 
 ALTER TABLE evento ADD COLUMN descricaoEvento VARCHAR(255);
 
@@ -241,9 +245,9 @@ DELETE FROM ingresso_has_evento WHERE ingresso_idIngresso = 1;
 -- 2. Excluir registros na tabela ingresso
 DELETE FROM ingresso WHERE idIngresso = 1;
 -- 3. Excluir o registro na tabela pagamento
-DELETE FROM pagamento WHERE idIngresso = 1;
+DELETE FROM pagamento WHERE idPagamento = 1;
 
--- DROP
+-- DROP (Remover coluna da tabela evento):
 ALTER TABLE evento DROP COLUMN eventocol;
 
 -- TRUNCATE: Em nosso script não foi possível utilizar o comando TRUNCATE, devido às dependências de chave estrangeira existentes. 
