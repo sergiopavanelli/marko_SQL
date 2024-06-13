@@ -40,4 +40,4 @@ A DML é uma linguagem de manipulação de dados usada para inserir, atualizar, 
 - `SELECT`: Consulta dados em uma tabela (ou conjunto de tabelas).
 
 
-[logico_marko.pdf](https://github.com/user-attachments/files/15821177/logico_marko.pdf)
+## Modelo lógico MARKO: [logico_marko.pdf](https://github.com/user-attachments/files/15821177/logico_marko.pdf)
